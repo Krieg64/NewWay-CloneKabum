@@ -1,39 +1,43 @@
 import React from 'react';
 import {
-  PromotionComponent, CardPromotion, PriceOld, PriceNew,
+  PromotionComponent, CardPromotion, PriceOld, PriceNew, TitleHomePromotion,
 } from './CardHomePromotion_styled';
-import { products } from '../../bank/bank';
+import { productspromotion } from '../../bank/bank';
 import Discount from '../Discount/Discount';
 import ButtonCart from '../ButtonCart/ButtonCart';
 
-function handleClick() {
-  console.log('teste');
-}
+const handleClick = () => {
+  console.log('caio');
+};
 
 const CardHomePromotion = () => (
-  <PromotionComponent>
-    {products.map((product) => (
-      <CardPromotion key={product.id}>
-        <img src={product.img} alt={product.title} />
-        <Discount colorBack1="#000" colorBack2="#000" sizeComponent="100" />
-        <h2>{product.titlepromotion}</h2>
-        <PriceOld>
-          De R$
-          {' '}
-          {(product.price * 1.15).toFixed(2)}
-          {' '}
-          POR
-        </PriceOld>
-        <PriceNew>
-          R$
-          {' '}
-          {product.price}
-        </PriceNew>
-        <span>À VISTA NO BOLETO BANCÁRIO COM 15% DE DESCONTO</span>
-        <ButtonCart primary={handleClick.bind} />
-      </CardPromotion>
-    ))}
-  </PromotionComponent>
+  <>
+    <TitleHomePromotion>Quinzena do consumidor</TitleHomePromotion>
+    <PromotionComponent>
+      {productspromotion.map((product) => (
+        <CardPromotion key={product.id}>
+          <img src={product.img} alt={product.title} />
+          <Discount colorBack1="#000" colorBack2="#000" sizeComponent="100" />
+          <h2>{product.titlepromotion}</h2>
+          <PriceOld>
+            De R$
+            {' '}
+            {product.price}
+            {' '}
+            POR
+          </PriceOld>
+          <PriceNew>
+            R$
+            {' '}
+            {(product.price - (product.price * 0.26)).toFixed(2)}
+          </PriceNew>
+          <span>À VISTA NO BOLETO BANCÁRIO COM 15% DE DESCONTO</span>
+          <ButtonCart colorBack1="#000" colorBack2="#FFB600" onclick={handleClick} />
+        </CardPromotion>
+      ))}
+    </PromotionComponent>
+  </>
+
 );
 
 export default CardHomePromotion;

@@ -5,7 +5,7 @@ export const Bar = styled.div`
   height: 8vh;
   margin: 0 auto;
   display: flex;
-  background-color: #0E7FA6;
+  background-color: #F24405;
 `;
 
 export const Brand = styled.div`
@@ -13,6 +13,15 @@ export const Brand = styled.div`
   height: auto;
   padding: 0 2rem 0 2rem;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img{
+    width: auto;
+    height: 100%;
+    border-radius: 5px;
+  }
   h2 {
     color: #F28705;
     font-size: 2rem;
@@ -36,6 +45,7 @@ export const NavBar = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 10px;
   }
 
 

@@ -3,14 +3,14 @@ import styled from 'styled-components';
 export const CardPromotionsComponent = styled.div`
   width: 70vw;
   height: 300px;
-  background-color: black;
   display: block;
   margin: auto;
+  padding: 10px 0;
 `;
 
 export const CardImg = styled.div`
   width: 100%;
-  height: inherit;
+  height: 100%;
   position: relative;
   
 

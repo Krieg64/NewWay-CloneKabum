@@ -1,3 +1,30 @@
+export const productspromotion = [
+  {
+    id: 1,
+    title: 'Processador Intel Core i5-9400F Coffee Lake, Cache 9MB, 2.9GHz (4.1GHz Max Turbo), LGA 1151, Sem Vídeo',
+    titlepromotion: 'Processador Intel Core i5-9400F Coffee Lake, Cache 9MB...',
+    price: 899.90,
+    description: 'Segurança e Confiabilidade- Novas instruções do Intel AES- Chave Segura- Extensões de guarda de software Intel (Intel SGX) com o Intel ME- Extensões de proteção de memória Intel (Intel MPX)- Protetor do Intel OS- Execute Desativar Bit- Protetor de inicialização Intel',
+    img: 'https://images3.kabum.com.br/produtos/fotos/99683/processador-intel-core-i5-9400f-coffee-lake-cache-9mb-2-9ghz-4-1ghz-max-turbo-lga-1151-bx80684i59400f_processador-intel-core-i5-9400f-coffee-lake-cache-9mb-2-9ghz-4-1ghz-max-turbo-lga-1151-bx80684i59400f_1564429485_gg.jpg',
+  },
+  {
+    id: 2,
+    title: 'Placa-Mãe ASRock B450M Steel Legend, AMD AM4, mATX, DDR4',
+    titlepromotion: 'Placa-Mãe ASRock B450M Steel Legend, AMD AM4, mATX, DDR4...',
+    price: 749.90,
+    description: 'Conteúdo da embalagem- 01 Placa-Mãe ASRock B450M Steel Legend- 01 Guia de instalação rápida- 01 CD de suporte, blindagem de E / S - 2 x cabos de dados SATA - 2 x parafusos para soquetes M.2',
+    img: 'https://images2.kabum.com.br/produtos/fotos/100672/placa-mae-asrock-b450m-steel-legend-amd-am4-matx-ddr4-90-mxb9y0-a0uayz_placa-mae-asrock-b450m-steel-legend-amd-am4-matx-ddr4-90-mxb9y0-a0uayz_1552586908_gg.jpg',
+  },
+  {
+    id: 3,
+    title: 'Placa de Vídeo MSI NVIDIA GeForce GTX 1050 Ti 4GT OC 4GB, GDDR5',
+    titlepromotion: 'Placa de Vídeo MSI NVIDIA GeForce GTX 1050 Ti 4GT OC 4GB...',
+    price: 929.90,
+    description: 'Conectores:- 1x DVI-D- 1x HDMI (versão 2.0)- 1x DP (versão 1.4)- Suporta até 03 monitores - Resolução máxima digital: 7680 x 4320',
+    img: 'https://images8.kabum.com.br/produtos/fotos/85798/85798_index_gg.jpg',
+  },
+];
+
 export const products = [
   {
     id: 1,
@@ -168,6 +195,7 @@ export const productHar = [
       { name: 'Rede wireless(sem fio)', id: 12 },
       { name: 'SSD', id: 13 },
       { name: 'Streamer', id: 14 },
+      { name: 'Cachorro', id: 15 },
     ],
   },
   {

@@ -25,7 +25,7 @@ export const Cart = styled.button`
   padding: 5px;
   margin: 0;
   border: 0;
-  background-color: black;
+  background-color: ${(props) => props.color};
   border-radius: 5px 0 0 5px;
 `;
 export const ButtonBuy = styled.button`
@@ -34,6 +34,6 @@ export const ButtonBuy = styled.button`
   padding: 5px;
   margin: 0;
   border: 0;
-  background-color: orange;
+  background-color: ${(props) => props.color};
   border-radius: 0 5px 5px 0;
 `;

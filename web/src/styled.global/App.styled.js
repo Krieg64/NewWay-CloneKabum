@@ -12,4 +12,5 @@ export const Teste = styled.div`
   height: auto;
   margin: 0;
   padding: 0;
+  background-color: #232326;
 `;

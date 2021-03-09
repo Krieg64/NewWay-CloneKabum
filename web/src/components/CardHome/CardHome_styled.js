@@ -1,15 +1,5 @@
 import styled from 'styled-components';
 
-export const BoxView = styled.div`
-  width: 100%;
-`;
-export const TitleHomePromotion = styled.h2`
-  display: flex;
-  padding-left: 20px;
-  padding-top: 5px;
-  font-family: Rubik;
-  color:  #FFB600;
-`;
 export const PromotionComponent = styled.div`
   width:  100%;
   height: auto;
@@ -20,11 +10,20 @@ export const PromotionComponent = styled.div`
   padding: 5px;
   margin: auto;
 `;
+
+export const TitleHome = styled.h2`
+  width: 100%;
+  font-family: Rubik;
+  color: #2EA6A6;
+  padding-left: 20px;
+  padding-top:  10px;
+`;
+
 export const CardPromotion = styled.div`
   width: 31%;
   min-width: 180px;
   height:  auto;
-  border: 1px solid #FFB600;
+  border: 1px solid rgba(46, 166, 166, 0.3);
   border-radius: 10px;
   margin:  5px;
 
@@ -40,6 +39,7 @@ export const CardPromotion = styled.div`
     font-size: .8rem;
     font-family: Rubik;
     padding: 10px;
+    color: #2EA6A6;
   }
   span{
     display: flex;
@@ -50,14 +50,16 @@ export const CardPromotion = styled.div`
     padding: 0px 10px;
   }
 `;
+
 export const PriceOld = styled.p`
   font-family: Rubik;
   font-size: .8rem;
   padding: 0px 10px;
 `;
+
 export const PriceNew = styled.p`
   font-family: Rubik;
   font-size: 2rem;
   padding: 0px 10px;
-  color: orange;
+  color: #2EA6A6;
 `;

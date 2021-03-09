@@ -2,18 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ButtonBuy, Cart, CardButton } from './ButtonCart_styled';
 
-const ButtonCart = ({ primary }) => (
+const ButtonCart = ({ onclick, colorBack1, colorBack2 }) => (
   <CardButton>
-    <Cart type="button">
+    <Cart color={colorBack1} type="button">
       {' '}
       <i className="fas fa-shopping-cart" />
     </Cart>
-    <ButtonBuy type="button" onClick={primary.bind}>texto</ButtonBuy>
+    <ButtonBuy color={colorBack2} type="button" onClick={onclick}>texto</ButtonBuy>
   </CardButton>
 );
-
 ButtonCart.propTypes = {
-  primary: PropTypes.string.isRequired,
+  onclick: PropTypes.func.isRequired,
+};
+ButtonCart.propTypes = {
+  colorBack1: PropTypes.string.isRequired,
+};
+ButtonCart.propTypes = {
+  colorBack2: PropTypes.string.isRequired,
 };
 
 export default ButtonCart;

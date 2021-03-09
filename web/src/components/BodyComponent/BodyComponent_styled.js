@@ -5,6 +5,9 @@ export const BoxBody = styled.div`
   height: auto;
   display: flex;
   margin: 0 auto;
+  background-color: white;
 `;
 
-export const Bar = styled.div``;
+export const BoxView = styled.div`
+  width: 100%;
+`;

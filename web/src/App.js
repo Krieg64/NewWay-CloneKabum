@@ -5,6 +5,7 @@ import Navbar from './components/NavBar/Navbar';
 import { Main, Teste } from './styled.global/App.styled';
 import BodyComponent from './components/BodyComponent/BodyComponent';
 import CardBanner from './components/CardBanner/CardBanner';
+import Footer from './components/Footer/Footer';
 
 const App = () => (
   <Teste>
@@ -13,6 +14,7 @@ const App = () => (
       <CardBanner />
       <BodyComponent />
     </Main>
+    <Footer />
   </Teste>
 );
 

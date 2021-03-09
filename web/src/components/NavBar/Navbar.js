@@ -2,11 +2,12 @@ import React from 'react';
 import {
   Bar, Brand, NavBar,
 } from './NavBar_styled';
+import logo from '../../files/logo2.png';
 
 const Navbar = () => (
   <Bar>
     <Brand>
-      <h2>TechBuild</h2>
+      <img src={logo} alt="NewWay" />
     </Brand>
     <NavBar>
       <a href="/">Meus Pedidos</a>

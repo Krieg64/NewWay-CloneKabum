@@ -17,7 +17,7 @@ export const Divmain = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F28705;
+    background-color: #F24405;
     transform: scale(1.05) translateY(1px);
   }
   i{
