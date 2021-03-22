@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+<body>
+    <h1>Teste</h1>
+     <form method="POST" action="createproduct">
+         <input type="text" name="title" placeholder="title">
+         <input type="text" name="titlePromotion" placeholder="titlePromotion">
+         <input type="number" name="price" placeholder="price">
+         <textarea type="text" id="des1" name="body" placeholder="body1">teste</textarea>
+         <input type="number" name="amount" placeholder="amount">
+         <input type="text" name="images" placeholder="images">
+         <input type="text" name="tag" placeholder="tag">
+         <input type="submit" value="enviar">
+     </form>
+     <h2>Form2</h2>
+     <form action="categoria/nova" method="POST">
+        <label for="name">Nome</label>
+            <input type="text" id="name" name="name" placeholder="nome da Categoria">
+        <label for="slug">Slug</label>
+            <input type="text" id="slug" name="slug" placeholder="slug da Categoria">
+            <hr />
+            <button type="submit">Criar</button>
+    </form>
+</body>
+</html>
