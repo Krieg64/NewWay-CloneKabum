@@ -1,17 +1,18 @@
 import React from 'react';
-import { BoxBody, BoxView } from './BodyComponent_styled';
-import Sidebar from '../SideBar/Sidebar';
-import CardHomePromotion from '../CardHomePromotion/CardHomePromotion';
-import CardHome from '../CardHome/CardHome';
+import { Switch, Route } from 'react-router-dom';
+import { BoxBody } from './BodyComponent_styled';
 // import CardPagePromotion from '../CardPagePromotion/CardPagePromotion';
+// import TesteComponent from '../TestComponent/TestComponent';
+
+import ADMComponent from '../ADMComponent/ADMComponent';
+import USERComponent from '../USERComponent/USERComponent';
 
 const BodyComponent = () => (
   <BoxBody>
-    <Sidebar />
-    <BoxView>
-      <CardHomePromotion />
-      <CardHome />
-    </BoxView>
+    <Switch>
+      <Route exact path="/" component={USERComponent} />
+      <Route path="/adm" component={ADMComponent} />
+    </Switch>
   </BoxBody>
 );
 

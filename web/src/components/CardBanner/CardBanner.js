@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { CardPromotionsComponent, CardImg } from './CardBanner_styled';
 import promotion1 from '../../files/promotion_pc.png';
 import promotion2 from '../../files/promotion2.jfif';
@@ -10,12 +10,11 @@ function load() {
   return new Promise((images) => {
     setTimeout(() => {
       images(document.querySelectorAll('#slider img'));
-    }, 500);
+    }, 0);
   });
 }
 
 let currentImageIndex = 0;
-// const images = document.querySelectorAll('#slider img');
 
 async function nextImage() {
   const image = await load();
@@ -30,32 +29,29 @@ async function nextImage() {
   image[currentImageIndex].classList.add('selected');
 }
 
-function start() {
-  setInterval(() => {
-    nextImage();
-  }, time);
-}
-window.addEventListener('load', start);
-
-// function prevImage() {
-//   images[currentImageIndex].classList.remove('act');
-
-//   currentImageIndex--;
-//   console.log(currentImageIndex);
-
-//   if (currentImageIndex < min) { currentImageIndex = 4; }
-
-//   images[currentImageIndex].classList.add('act');
+// function start() {
+//   setInterval(() => {
+//     nextImage();
+//   }, time);
 // }
+// window.addEventListener('load', start);
 
-const CardPromotions = () => (
-  <CardPromotionsComponent>
-    <CardImg id="slider">
-      <img src={promotion1} alt="promotion1" className="selected" />
-      <img src={promotion2} alt="promotion2" />
-      <img src={promotion3} alt="promotion3" />
-    </CardImg>
-  </CardPromotionsComponent>
-);
+const CardPromotions = () => {
+  useEffect(() => {
+    const loop = setInterval(() => { nextImage(); }, time);
+
+    return () => { clearInterval(loop); };
+  }, []);
+
+  return (
+    <CardPromotionsComponent>
+      <CardImg id="slider">
+        <img src={promotion1} alt="promotion1" className="selected" />
+        <img src={promotion2} alt="promotion2" />
+        <img src={promotion3} alt="promotion3" />
+      </CardImg>
+    </CardPromotionsComponent>
+  );
+};
 
 export default CardPromotions;

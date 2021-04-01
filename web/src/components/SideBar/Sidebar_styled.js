@@ -1,24 +1,21 @@
 import styled from 'styled-components';
 
 export const Divmain = styled.div`
-  width: 20%;
-  min-width: 155px;
-  height: auto;
-  display: block;
   background-color: rgba(230, 230, 230);
 
   .names_products{
     padding: 4px 5px;
   }
   h2{
+    width: 100%;
+    height: auto;
     font-family: Rubik;
     color: white;
     padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F24405;
-    transform: scale(1.05) translateY(1px);
+    background-color: #232323;
   }
   i{
     color: black;

@@ -6,7 +6,7 @@ const Sidebar = () => (
   <Divmain>
     {productHar.map((product) => (
       <div key={product.id}>
-        <h2>{product.name}</h2>
+        <h2>{product.id === 1 || product.id === 2 ? product.name : null}</h2>
         <BoxName>
           {product.subname.map((subname) => (
             <div key={subname.id} className="names_products">

@@ -16,6 +16,12 @@ export const Brand = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  a{
+    width:  100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
   img{
     width: auto;
@@ -32,7 +38,7 @@ export const Brand = styled.div`
 
 export const NavSearchLogin = styled.div`
   width: 70vw;
-  height: 10vh;
+  height: 8vh;
   display: flex;
 `;
 export const NavSearch = styled.div`
@@ -86,13 +92,44 @@ export const NavBar = styled.div`
     display: flex;
     padding: 5px 0;
     box-sizing: content-box;
-    border-top: 2px solid rgba(35, 35, 38, 0.3);
+    border-top: 2px solid rgba(40, 40, 40, 0.8);
   }
   li{
+    width: auto;
+    display: inline-block;
     color: white;
     font-family: Rubik;
     font-size: 1rem;
-    padding: 4px 10px;
+    padding: 4px 15px;
     list-style: none;
+    position: relative;
+    cursor: pointer;
+  }
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+  li:hover div{
+    display: grid;
+  }
+`;
+export const DropDown = styled.div`
+  width: auto;
+  box-sizing:  border-box;
+  position: absolute;
+  display: none;
+  grid-template-columns: 50% 50%;
+  z-index: 99;
+  background-color: #232326;
+  transform: translateY(10px) translateX(-1%);
+  
+  li{
+    width: 220px;
+    border: 1px solid black;
+    margin: 5px;
+    background-color: #F24405;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
   }
 `;

@@ -10,12 +10,12 @@ const initialValue = {
   price: '',
   body: '',
   amount: '',
-  images: '',
   tag: '',
 };
 
 const CreateProductComponent = () => {
   const [values, setValues] = useState(initialValue);
+  const [date, setDate] = useState('');
 
   function onChange(ev) {
     const { name, value } = ev.target;
@@ -24,12 +24,29 @@ const CreateProductComponent = () => {
     console.log(values);
   }
 
-  async function handleClick() {
-    try {
-      await axios.post('http://localhost:8004/createproduct', values);
-    } catch (error) {
-      console.log(error);
-    }
+  async function handleClick(e) {
+    e.preventDefault();
+
+    console.log(date);
+
+    const data = new FormData();
+    for (let i = 0; i < date.length; i += 1) { data.append(date[i].name, date[i]); }
+    data.append('title', values.title);
+    data.append('titlePromotion', values.titlePromotion);
+    data.append('price', values.price);
+    data.append('body', values.body);
+    data.append('amount', values.amount);
+    data.append('tag', values.tag);
+
+    axios.post('http://localhost:8004/createproduct', data, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    }).then((response) => {
+      response.json({ mensage: 'Produto Cadastrado' });
+    }).catch((err) => {
+      console.log(err);
+    });
   }
 
   return (
@@ -67,12 +84,7 @@ const CreateProductComponent = () => {
           </label>
           <label>
             Images do Produto
-            <textarea
-              type="text"
-              name="images"
-              placeholder="Ex: <img scr='URL1' alt='nome da img1' /><img scr='URL2' alt='nome da img2' />"
-              onChange={onChange}
-            />
+            <input type="file" name="file" multiple onChange={(e) => { setDate(e.target.files); }} />
           </label>
         </div>
         <Finally>

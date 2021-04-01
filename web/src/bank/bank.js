@@ -180,10 +180,11 @@ export const productHar = [
   {
     id: 1,
     name: 'Hardware',
+    arrow: 'true',
     subname: [
       { name: 'Coolers', id: 1 },
       { name: 'Disco Rigido', id: 2 },
-      { name: 'Dirves', id: 3 },
+      { name: 'Drivers', id: 3 },
       { name: 'Fontes', id: 4 },
       { name: 'Mémoria RAM', id: 5 },
       { name: 'Menu Rede', id: 6 },
@@ -201,6 +202,7 @@ export const productHar = [
   {
     id: 2,
     name: 'Gamer',
+    arrow: 'true',
     subname: [
       { name: 'Cadeira Gamer', id: 1 },
       { name: 'Cockpit', id: 2 },
@@ -215,7 +217,7 @@ export const productHar = [
       { name: 'Playstation 4', id: 11 },
       { name: 'Playstation 5', id: 12 },
       { name: 'Tapetes Gamer', id: 13 },
-      { name: 'Tectoyr', id: 14 },
+      { name: 'Tectoy', id: 14 },
       { name: 'Xbox 360', id: 15 },
       { name: 'Xbox One', id: 16 },
       { name: 'Xbox Series', id: 17 },

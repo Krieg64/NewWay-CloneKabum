@@ -65,7 +65,7 @@ export const BoxTextArea = styled.div`
   
   textarea {
     width: 100%;
-    height: 80px;
+    height: 200px;
     border:1px solid rgba(0, 0, 0, 0.1);
     background-color: rgba(0, 0, 0, 0.02);
     resize: none;

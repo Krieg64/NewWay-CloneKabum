@@ -28,8 +28,8 @@ const Product = new Schema({
         require: true
     },
     images: {
-        type: String,
-        require: true
+        type: Array,
+        require:  true
     },
     tag: {
         type: String,

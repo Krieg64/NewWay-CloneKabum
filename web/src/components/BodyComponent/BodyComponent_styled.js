@@ -8,6 +8,4 @@ export const BoxBody = styled.div`
   background-color: white;
 `;
 
-export const BoxView = styled.div`
-  width: 100%;
-`;
+export const BB = styled.div``;
